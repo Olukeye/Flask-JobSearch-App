@@ -1,8 +1,7 @@
 from flask import Flask
-from database import Base, engine
-from config import settings
-
-
+from .database import  SessionLocal, Base, engine
+from .config import settings
+from . import user
 
 
 Base.metadata.create_all(bind=engine)
@@ -10,14 +9,14 @@ Base.metadata.create_all(bind=engine)
 app = Flask(__name__)
 
 
-
+    
 @app.route('/')
 def index():
-    return "Hello There guys, been a while and i'm getting lazy!"
+    return "Hello There guys, been a while and i'm getting lazy!!!!!!!!!"
 
 
 if '__name__' == '__main__':
-    app.debug = True
+    app.run(debug = True)
     
     
     

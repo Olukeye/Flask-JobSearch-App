@@ -1,6 +1,6 @@
 # veirtual environment
 venv/
-env/
+*.env/
 __pycache__/
 instance/*
 !instance/.gitignore
